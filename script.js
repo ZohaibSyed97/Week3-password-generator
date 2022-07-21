@@ -20,7 +20,7 @@ function generatePassword() {
   let number = prompt("Do you want to include number/s on your password?)");
   let specialChar = prompt("Do want to special character/s on your password?)");
   const alphabet = "abcdefghijklmnopqrstuvwxyz"; //this code line of code was taken form https://www.coderrocketfuel.com/article/generate-a-random-letter-from-the-alphabet-using-javascript
-
+  let specialCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
   let generated = [];
 
   for (let i = 0; i <= passLength.length; i++) {
@@ -37,6 +37,11 @@ function generatePassword() {
     if (number === "yes") {
       let randomNumber = Math.floor(Math.random() * 11);
       generated.push(randomNumber.toString());
+    }
+    if (specialChar === "yes") {
+      let randomSpecialChar =
+        specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+      generated.push(randomSpecialChar.toString());
     }
   }
 
