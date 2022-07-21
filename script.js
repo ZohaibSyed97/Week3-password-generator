@@ -24,11 +24,11 @@ function generatePassword() {
   let generated = [];
   if (lowerCase === "yes") {
     let randomLowerCase = alphabet[Math.floor(Math.random() * alphabet.length)];
-    generated.push(randomLowerCase.toString());
+    generated.push(randomLowerCase.toLowerCase());
   }
   if (upperCase === "yes") {
     let randomUpperCase = alphabet[Math.floor(Math.random() * alphabet.length)];
-    generated.push(randomUpperCase.toString());
+    generated.push(randomUpperCase.toUpperCase());
   }
   if (number === "yes") {
     let randomNumber = Math.floor(Math.random() * 11);
